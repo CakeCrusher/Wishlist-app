@@ -17,7 +17,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const Wishlist = (props) => {
   const [location, setLocation] = useState(null);
-  const [request, setRequest] = useState('buy me bread');
+  const [request, setRequest] = useState('');
   const [loading, setLoading] = useState(false);
   useEffect(async () => {
     const wishlist = await fetchGraphQL(GET_CUSTOMER_WISHLIST, { customerId: props.customer.id });

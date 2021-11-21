@@ -29,7 +29,11 @@ export default function App() {
       <NativeBaseProvider theme={theme}>
         <NavigationContainer >
           <Stack.Navigator>
-
+            <Stack.Screen
+              name="Signin"
+              component={Signin}
+              options={{headerShown: false}}
+            />
             <Stack.Screen
               name="Wishlist"
               component={Wishlist}
@@ -40,12 +44,6 @@ export default function App() {
               component={Offers}
               options={{headerShown: false}}
             />
-            <Stack.Screen
-              name="Signin"
-              component={Signin}
-              options={{headerShown: false}}
-            />
-
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>
