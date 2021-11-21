@@ -12,7 +12,7 @@ const WishlistItem = (props) => {
 
 
   return (
-    <Center>
+    <Center paddingTop={1}>
       <Box
         shadow="2"
         rounded="lg"
@@ -22,12 +22,12 @@ const WishlistItem = (props) => {
         marginBottom={5}
       >
         <Stack space="2" style={styles.box}>
-        {props.item.offers.length ? (
+        {props.item.offers.filter(offer => offer.accepted === null).length ? (
           <Box
           rounded="lg"
           style={styles.notification}
           >
-            <Text color="white">{props.item.offers.length}</Text>
+            <Text color="white">{props.item.offers.filter(offer => offer.accepted === null).length}</Text>
           </Box>
         ) : (<View height={1} />)}
 

@@ -21,7 +21,7 @@ const Offers = (props) => {
     const offers = await fetchGraphQL(GET_WISHLISTITEM_OFFERS, { wishlistitemId: props.route.params.wishlistitemId });
     props.setOffers(offers.data.offers);
   }, [props.route.params.wishlistitemId])
-
+  console.log('CUSTOMER', props.customer);
   
   if (!props.offers.offers.length) {
     return (
@@ -41,7 +41,7 @@ const Offers = (props) => {
             </TouchableOpacity>
           </Button>
           <Center style={styles.row}>
-            <Text fontSize='3xl' style={styles.altText}>Homer's </Text>
+            <Text fontSize='3xl' style={styles.altText}>{props.customer.username}'s </Text>
             <Text fontSize='3xl' style={styles.text}>Offers</Text>
           </Center>
           <Button
@@ -73,7 +73,7 @@ const Offers = (props) => {
         </TouchableOpacity>
       </Button>
       <Center style={{...styles.row, ...styles.horPad}}>
-        <Text fontSize='3xl' style={styles.altText}>Homer's </Text>
+        <Text fontSize='3xl' style={styles.altText}>{props.customer.username}'s </Text>
         <Text fontSize='3xl' style={styles.text}>Offers</Text>
       </Center>
       <Divider marginBottom={5} />

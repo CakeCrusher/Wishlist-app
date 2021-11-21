@@ -22,6 +22,7 @@ query MyQuery($customerId: uuid = "") {
     id
     offers {
       id
+      accepted
     }
   }
 }

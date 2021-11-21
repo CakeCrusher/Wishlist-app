@@ -54,7 +54,7 @@ const Wishlist = (props) => {
       <Layout>
         <View style={styles.container}>
           <Center style={styles.row}>
-            <Text fontSize='3xl' style={styles.altText}>Homer's </Text>
+            <Text fontSize='3xl' style={styles.altText}>{props.customer.username}'s </Text>
             <Text fontSize='3xl' style={styles.text}>Wishlist</Text>
           </Center>
           <Button
@@ -72,7 +72,7 @@ const Wishlist = (props) => {
   return (
     <View style={styles.container}>
       <Center style={{...styles.row, ...styles.horPad}}>
-        <Text fontSize='3xl' style={styles.altText}>Homer's </Text>
+        <Text fontSize='3xl' style={styles.altText}>{props.customer.username}'s </Text>
         <Text fontSize='3xl' style={styles.text}>Wishlist</Text>
       </Center>
       <Divider marginBottom={5} />

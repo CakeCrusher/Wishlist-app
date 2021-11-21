@@ -11,7 +11,7 @@ import { fetchGraphQL } from '../helperFunctions';
 import { SIGN_IN_CUSTOMER } from '../schemas';
 
 const Signin = (props) => {
-  const [username, setUsername] = useState('Home');
+  const [username, setUsername] = useState('Bart');
   const [password, setPassword] = useState('secret');
   
   const handleSubmit = async () => {
